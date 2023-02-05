@@ -39,8 +39,8 @@ public class UserService implements IUserService {
 
     @Override
     public User retrieveUser(Long id) {
-        // TODO Auto-generated method stub
-        return null;
+        User user = userRepository.findById(id).orElse(null);
+        return user;
     }
-    
+
 }

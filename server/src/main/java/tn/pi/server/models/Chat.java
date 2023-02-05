@@ -9,6 +9,9 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import org.hibernate.annotations.CreationTimestamp;
+
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -35,6 +38,7 @@ public class Chat implements Serializable {
     @Column(length = 65555)
     private String messageSent;
     @ManyToOne
+    @JsonBackReference
 	private User user;
 
     public Chat(String messageSent, String messageReceived, User user) {

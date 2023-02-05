@@ -3,10 +3,13 @@ package tn.pi.server.models;
 import java.io.Serializable;
 import java.util.Date;
 import java.util.Set;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -14,6 +17,8 @@ import javax.persistence.OneToMany;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import org.hibernate.annotations.CreationTimestamp;
+
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -58,16 +63,16 @@ public class User implements Serializable {
     private String state;
     private String street;
     private String zip;
-    @Column(name = "dateSent", nullable = false, updatable = false)
+    @Column(name = "createdat", nullable = false, updatable = false)
     @CreationTimestamp
-    private Date creationDate;
+    private Date createdat;
     @Enumerated(EnumType.STRING)
     private Status status; 
     @Enumerated(EnumType.STRING)
     private Role role ;
     @Column(length = 65555)
     private String confirmationCode;
-    @OneToMany(mappedBy = "user")
-	@JsonIgnore
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
+	@JsonBackReference
 	private Set<Chat> chat;
 }

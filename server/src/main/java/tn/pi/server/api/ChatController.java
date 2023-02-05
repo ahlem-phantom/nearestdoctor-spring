@@ -8,7 +8,9 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 import tn.pi.server.config.ChatConfig;
 import tn.pi.server.models.Chat;
+import tn.pi.server.models.User;
 import tn.pi.server.services.IChatService;
+import tn.pi.server.services.IUserService;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -20,17 +22,20 @@ public class ChatController {
 
      @Autowired
 	   IChatService chatService;
+     @Autowired
+     IUserService userService;
 
     @PostMapping("/send-msg")
 	  @ResponseBody
-    public String sendMessage(@RequestBody String msg) throws FileNotFoundException, IOException  {
+    public String sendMessage(@RequestBody Chat msg) throws FileNotFoundException, IOException  {
         String CREDENTIAL_FILE = "C:/Users/Ahlem/Desktop/hello world/nearestdoctors/server/src/main/resources/testbot-epks-54686313108b.json";
         String PROJECT_ID = "testbot-epks";
         ChatConfig client = new ChatConfig(CREDENTIAL_FILE, PROJECT_ID);
         String sessionId = UUID.randomUUID().toString();
-        Chat chat = new Chat(msg, client.request(sessionId, msg));
+        User user = userService.retrieveUser(msg.getUser().getId());
+        Chat chat = new Chat(msg.getMessageSent(), client.request(sessionId,msg.getMessageSent()) , user);
         chatService.addChat(chat);
-        return client.request(sessionId, msg);
+        return client.request(sessionId, msg.getMessageSent());
     }
 
 }
