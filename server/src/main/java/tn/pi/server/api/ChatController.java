@@ -12,6 +12,7 @@ import tn.pi.server.models.User;
 import tn.pi.server.services.IChatService;
 import tn.pi.server.services.IUserService;
 
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.UUID;
@@ -28,7 +29,8 @@ public class ChatController {
     @PostMapping("/send-msg")
 	  @ResponseBody
     public String sendMessage(@RequestBody Chat msg) throws FileNotFoundException, IOException  {
-        String CREDENTIAL_FILE = "C:/Users/Ahlem/Desktop/hello world/nearestdoctors/server/src/main/resources/testbot-epks-54686313108b.json";
+        File file = new File("src/main/resources/testbot-epks-54686313108b.json");
+        String CREDENTIAL_FILE = file.getAbsolutePath();
         String PROJECT_ID = "testbot-epks";
         ChatConfig client = new ChatConfig(CREDENTIAL_FILE, PROJECT_ID);
         String sessionId = UUID.randomUUID().toString();
