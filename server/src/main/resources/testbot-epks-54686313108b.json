@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "testbot-epks",
+  "private_key_id": "54686313108bb9aaf36d6137130efed07daa85dd",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCFQxrA7L02vJOC\njJs0339Z1m3W+zD4VvyB9gHGQnJRQEwdnzr/MA42xwlqZhF15haWlII03YiYXQe2\n/CMJBBdnd8sbq1Z5LPEpZtVlo2H4ah5OfWnynlT26V8ac3imufdBLZ8PSSg1btAS\n1k2hI61ViMbfjVIqstsqooh3cK9OiZb4fKKI9Yg/EHZBflSpTE+vXQIg470QYWYQ\nCUsunPaZtxWKHNmkD2wPsABnJvcGPbc4TiWZwwInpNuDbGeH7JdlP9MQCu258vKN\nc9EL5Y3AnjUcAGVkMoN0oniQqGW24EHDY+Bv+llbNu/406byjQhXwistN95EFLgg\nDU+Ym47JAgMBAAECggEAEFKxZrs4zAkaOm31nurXYw4wYxpem7Sv9k1HV10ROqGZ\nETHNXK+qtgv4O8en0NyvnJ8xOb9++Ua/6KqGshaFtV9HiiqZC3u1SIB3mB0EpZR+\nBNg4z4aUWrAoPYmyWB3ESwAHESzBV5Yst3n3hUrk8uqvjXd2fpNs5BKHi7XKS2DC\n0ubKnD8I3cAFHDQGQLKpVnWJX5AgyxtFCPl7H49jCAeUQh+vtQuzkAhIpV+VAm4x\n8baPhjY5aV2/pZECXrbX5AJ5iZNQsrk5ILUhM2gBKxo7xeAGKjQUECmuGiDlye+r\n4HG4UFizXitGYWO/3b2Bh8ue4sXXkEzYpGMaX+4VQQKBgQC8aD6rdpst8+NcKN1X\nEItGDEuE8T/YmHDbIwRke+Mxl/HL1zPU8LGQHMryFnrXfGlMRhHCjyv4xc1xutXY\nm7uNSMHZWVwsKKqUtUA6aQhV/+51ecUUosko1vimbVNDWo842vP6yMNhBMJxc9yw\nb5TmBwxbE1SQh+diRacWOkAHeQKBgQC1EjUlpXl9dax5/9iDXqcLvOdNqo/GMnLP\nc1MwXRVvftttM8wE+vKPgAfPjMMzGk12MMXTq2OoReqUNCIpEtX9N2FFyVfcsGTt\n3Rq7mJKr8R18wZIKQSwuAm3f22NL0spiNpjqc1g1fd30QN/l5aRlsKXIPljnle1t\ny5w88HLd0QKBgHEO4SSFPOObacDg6MmZLOow8JRrLJPuDjMB1V3zFcep1TgsAHd0\npCjFjmctZDOw/YL+vSOSRKG5GOp5Yl/kO+yxT1n9DJmXIZ2xEkS6yHzK4q5uDvyu\nHqY6MeW0zvUo/67vfN7t4Ih0kbYA/9qEasaKTjjM5b8BPrEy+OwWsluJAoGAf2kP\ncq0MXsaFldb8X/wjaPQEgjcJMfpfpS/OEpL9OVY3SpEO91YpheYeGOJAnF3esdLB\n8R6BYm/ID37bprE1WBc24Cc8JvMMIf/aBrTmSAzCpf2DKKoRT1KwQ7uZFEp/1Dn8\nwcRmBkXJ/0wDAD7lvhRdoxiT8GkkB4UlLBA5k3ECgYBo30MostBWvah5ddRQE1vf\nSnO4rXpOsM3H0R9Th3UL0wKnGfhWH6t/UqHNK9VVIC74cvynzI+akmcp5AEVzASA\nUr45Hsu7FV/T9w4w9eMnMbrbxi6Nj/sZdb0eI7BGZIZ1juopS1rSLc6gauXgzZDJ\nYYEzkWbyr2G3QWZji6ISdQ==\n-----END PRIVATE KEY-----\n",
+  "client_email": "nearestdoctor@testbot-epks.iam.gserviceaccount.com",
+  "client_id": "109846978386822714283",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/nearestdoctor%40testbot-epks.iam.gserviceaccount.com"
+}
