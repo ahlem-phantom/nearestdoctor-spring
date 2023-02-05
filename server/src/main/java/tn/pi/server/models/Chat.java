@@ -2,27 +2,18 @@ package tn.pi.server.models;
 
 import java.io.Serializable;
 import java.util.Date;
-import java.util.Set;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
-
 import org.hibernate.annotations.CreationTimestamp;
-
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
-
 
 @Entity
 @Getter
@@ -43,10 +34,17 @@ public class Chat implements Serializable {
     private String messageReceived;
     @Column(length = 65555)
     private String messageSent;
+    @ManyToOne
+	private User user;
+
+    public Chat(String messageSent, String messageReceived, User user) {
+        this.messageSent = messageSent;
+        this.messageReceived = messageReceived;
+        this.user = user;
+    }
 
     public Chat(String messageSent, String messageReceived) {
         this.messageSent = messageSent;
         this.messageReceived = messageReceived;
     }
-
 }

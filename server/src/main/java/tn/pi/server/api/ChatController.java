@@ -18,29 +18,19 @@ import java.util.UUID;
 @RequestMapping("/chat")
 public class ChatController {
 
-  @Autowired
-	IChatService chatService;
+     @Autowired
+	   IChatService chatService;
 
-  @PostMapping("/test")
-	@ResponseBody
-    public String processRequest(@RequestBody String msg) throws FileNotFoundException, IOException  {
+    @PostMapping("/send-msg")
+	  @ResponseBody
+    public String sendMessage(@RequestBody String msg) throws FileNotFoundException, IOException  {
         String CREDENTIAL_FILE = "C:/Users/Ahlem/Desktop/hello world/nearestdoctors/server/src/main/resources/testbot-epks-54686313108b.json";
         String PROJECT_ID = "testbot-epks";
         ChatConfig client = new ChatConfig(CREDENTIAL_FILE, PROJECT_ID);
         String sessionId = UUID.randomUUID().toString();
-          
-        //to refine
-      //  BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-      //  System.out.println("Talk to the bot, press Ctrl-D to exit\n");
-     //   System.out.print("Me: ");
-       // String userInput = br.readLine();
-       // while (userInput != null) {
-         //   System.out.print("Bot: ");
-          //  System.out.print("Me: ");
-          //  userInput = br.readLine();
-        //}
         Chat chat = new Chat(msg, client.request(sessionId, msg));
         chatService.addChat(chat);
         return client.request(sessionId, msg);
-}
+    }
+
 }
