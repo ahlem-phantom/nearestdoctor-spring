@@ -39,6 +39,7 @@ public class Chat implements Serializable {
     private String messageSent;
     @ManyToOne
     @JsonBackReference
+    @ToString.Exclude
 	private User user;
 
     public Chat(String messageSent, String messageReceived, User user) {

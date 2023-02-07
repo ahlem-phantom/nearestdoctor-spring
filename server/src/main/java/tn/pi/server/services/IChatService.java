@@ -6,7 +6,7 @@ import tn.pi.server.models.Chat;
 
 public interface IChatService {
 
-	List<Chat> retrieveAllChats();
+	List<Chat> retrieveAllChats(Long id);
 
 	Chat addChat(Chat c);
 
