@@ -7,11 +7,11 @@ import { ChatbotComponent } from './chatbot/chatbot.component';
 const routes: Routes =[
   {
     path: '',
-    redirectTo: 'login',
+    redirectTo: 'chat',
     pathMatch: 'full',
   },
 {
-  path: 'login',
+  path: 'chat',
   component: ChatbotComponent,
 },
 
