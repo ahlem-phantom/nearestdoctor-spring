@@ -61,7 +61,9 @@ You may find below the list of the frameworks/libraries that we used to build th
 <br/>
 
  <div align="center">
-	
+    <a href="https://angular.io">
+   <img src="https://github.com/devicons/devicon/blob/master/icons/angularjs/angularjs-original.svg" title="MySQL" alt="MySQL" width="150" height="150"/>
+   </a>
    <a href="https://spring.io/projects/spring-boot">
    <img src="https://github.com/devicons/devicon/blob/master/icons/spring/spring-original-wordmark.svg" title="Spring" alt="Srping" width="150" height="150"/>
   </a>
@@ -69,6 +71,14 @@ You may find below the list of the frameworks/libraries that we used to build th
    <a href="https://www.mysql.com/fr">
    <img src="https://github.com/devicons/devicon/blob/master/icons/mysql/mysql-original-wordmark.svg" title="MySQL" alt="MySQL" width="150" height="150"/>
    </a>
+     
+
+   
+   <a href="https://cloud.google.com/dialogflow/docs">
+   <img src="https://dem.tools/sites/default/files/2021-10/dialogflow.png" title="Dialogflow" alt="Dialogflow" width="150" height="150"/>
+   </a>
+
+
    <br>
   </div>
 
