@@ -43,8 +43,10 @@
 
 <!-- ABOUT THE PROJECT -->
 ## 📃 About 
-
+<div id="top" align="center">
+ <img src="https://user-images.githubusercontent.com/78981558/217397517-6eb42a8e-fe89-4a8f-914a-54fc56e9aa7d.png" height="500" alt="HRMS">
 <br><br>
+</div>
 
  ### 📜 Main features
 <br> 
